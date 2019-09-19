@@ -38,6 +38,6 @@ class install4j($version = '4.2.8', $license, $run_as, $homedir = 'UNSET', $down
   }
   file { "$actual_homedir/.install4j$majorVersion/config.xml":
     mode    => "600",
-    content => template("install4j/config.xml.erb"),
+    content => regsubst(template("install4j/config.xml.erb"), '(?<!\r)\n', "\r\n", 'G'),
   }
 }
