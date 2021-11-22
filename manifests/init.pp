@@ -6,7 +6,7 @@ class install4j($version = '4.2.8', $license, $run_as, $homedir = 'UNSET', $down
 
   if $download_url == 'UNSET' {
     $underscore_version = regsubst($version, '\.', '_', 'G')
-    $download_url_real = "http://download.ej-technologies.com/install4j/install4j_linux_${underscore_version}.rpm"
+    $download_url_real = "http://download-gcdn.ej-technologies.com/install4j/install4j_linux_${underscore_version}.rpm"
   }
   else {
     $download_url_real = $download_url
